@@ -104,6 +104,57 @@ h2, h3 {
     color: #4d7655
 }
 
+.bounce {
+  transition: all 0.3s ease-out;
+}
+
+.bounce:hover {
+  display: inline-block;
+  animation: rubberband 0.8s ease-out;
+  color: #43d213;
+}
+
+@keyframes rubberband {
+  0% {
+    transform: scaleX(1);
+  }
+  40% {
+    transform: scaleX(1.12) scaleY(0.75);
+  }
+  55% {
+    transform: scaleX(0.85) scaleY(1);
+  }
+  65% {
+    transform: scaleX(1.09) scaleY(0.85);
+  }
+  75% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+  90% {
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+}
+
+@keyframes rainbow_animation {
+  0%, 100% {
+    background-position: 0 0; 
+  }
+  50% {
+    background-position: 100% 0;
+  }
+}
+
+.rainbow {
+  background: linear-gradient(to right, #6666ff, #0099ff, #00ff00, #ff3399, #6666ff);
+  background-clip: text;
+  color: transparent; 
+  animation: rainbow_animation 6s ease-in-out infinite; 
+  background-size: 400% 100%; 
+}
+
 @media screen and (min-width: 120px) and (max-width: 100px) {
     main {
         height: 100ch;
