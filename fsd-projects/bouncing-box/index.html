@@ -66,6 +66,7 @@
         // TODO 2 - Variable declarations
 
         var positionX = 0;
+        var points = 0;
 
         /* 
 			This Function will be called 20 times/second. Each time it is called,
@@ -85,7 +86,8 @@
 			*/
         function handleBoxClick() {
           positionX = 0;
-          changeBoxText(0);
+          points++;
+          changeBoxText(points);
         }
       })();
     </script>
